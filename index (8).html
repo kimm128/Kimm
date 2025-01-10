@@ -1,0 +1,310 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Future-Ready IT Training
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            background: linear-gradient(to right, #fefefe, #e6d9c3);
+            color: #4a4a4a;
+        }
+
+        .module-card {
+            background-color: #ffffff;
+            border: 1px solid #d9b99b;
+        }
+
+        .module-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .btn {
+            background-color: #d9b99b;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: #a9825a;
+        }
+
+        .materials ul li {
+            margin-bottom: 1rem;
+        }
+
+        .video-container {
+            display: none;
+        }
+
+        .video-container.active {
+            display: block;
+        }
+  </style>
+ </head>
+ <body class="flex flex-col items-center min-h-screen">
+  <h1 class="text-4xl font-bold mt-10 mb-8">
+   Future-Ready IT Training
+  </h1>
+  <div class="container mx-auto flex flex-wrap justify-center gap-6">
+   <!-- Module 1 -->
+   <div class="module-card rounded-lg shadow-lg transition-transform cursor-pointer w-60" onclick="showModule(1)">
+    <img alt="A digital literacy training module" class="w-full h-40 object-cover rounded-t-lg" src="https://placehold.co/250x150/ff6347/ffffff?text=Literasi+Digital"/>
+    <div class="p-4 text-center">
+     <h2 class="text-xl font-semibold uppercase mb-2">
+      Meningkatkan Literasi Digital
+     </h2>
+     <p>
+      Pelatihan menganalisis data dan mengenali ancaman siber.
+     </p>
+    </div>
+   </div>
+   <!-- Module 2 -->
+   <div class="module-card rounded-lg shadow-lg transition-transform cursor-pointer w-60" onclick="showModule(2)">
+    <img alt="A modern technology training module" class="w-full h-40 object-cover rounded-t-lg" src="https://placehold.co/250x150/ff9800/ffffff?text=Teknologi+Modern"/>
+    <div class="p-4 text-center">
+     <h2 class="text-xl font-semibold uppercase mb-2">
+      Memperkenalkan Teknologi Modern
+     </h2>
+     <p>
+      Kurikulum untuk mengenalkan teknologi terkini.
+     </p>
+    </div>
+   </div>
+   <!-- Module 3 -->
+   <div class="module-card rounded-lg shadow-lg transition-transform cursor-pointer w-60" onclick="showModule(3)">
+    <img alt="A digital ethics training module" class="w-full h-40 object-cover rounded-t-lg" src="https://placehold.co/250x150/3f51b5/ffffff?text=Etika+Digital"/>
+    <div class="p-4 text-center">
+     <h2 class="text-xl font-semibold uppercase mb-2">
+      Membangun Kesadaran Etika Digital
+     </h2>
+     <p>
+      Menghindari cyberbullying dan berperilaku etis.
+     </p>
+    </div>
+   </div>
+   <!-- Module 4 -->
+   <div class="module-card rounded-lg shadow-lg transition-transform cursor-pointer w-60" onclick="showModule(4)">
+    <img alt="A productivity technology training module" class="w-full h-40 object-cover rounded-t-lg" src="https://placehold.co/250x150/4caf50/ffffff?text=Produktivitas"/>
+    <div class="p-4 text-center">
+     <h2 class="text-xl font-semibold uppercase mb-2">
+      Menanamkan Produktivitas Teknologi
+     </h2>
+     <p>
+      Penggunaan teknologi untuk mencapai tujuan karier.
+     </p>
+    </div>
+   </div>
+  </div>
+  <!-- Module Details -->
+  <div class="module-details hidden bg-white text-gray-800 w-11/12 max-w-3xl mt-8 p-6 rounded-lg shadow-lg" id="module-1">
+   <h3 class="text-2xl font-bold mb-4 text-blue-500">
+    Module 1: Meningkatkan Literasi Digital
+   </h3>
+   <p class="text-lg mb-6">
+    Pelajari cara melindungi data pribadi, mengenali ancaman siber, dan menganalisis data digital.
+   </p>
+   <div class="materials">
+    <h4 class="text-xl font-semibold mb-4">
+     Materi:
+    </h4>
+    <ul class="list-disc pl-6 mb-6">
+     <li>
+      Apa itu ancaman siber dan jenis-jenisnya
+     </li>
+     <li>
+      Strategi melindungi data pribadi
+     </li>
+     <li>
+      Tools dan aplikasi untuk menganalisis data
+     </li>
+    </ul>
+   </div>
+   <div class="flex justify-center">
+    <button class="btn py-2 px-6 rounded-lg mx-2" onclick="showVideo(1)">
+     Lanjutkan
+    </button>
+    <button class="btn py-2 px-6 rounded-lg mx-2" onclick="closeModule(1)">
+     Kembali
+    </button>
+   </div>
+  </div>
+  <div class="module-details hidden bg-white text-gray-800 w-11/12 max-w-3xl mt-8 p-6 rounded-lg shadow-lg" id="module-2">
+   <h3 class="text-2xl font-bold mb-4 text-blue-500">
+    Module 2: Memperkenalkan Teknologi Modern
+   </h3>
+   <p class="text-lg mb-6">
+    Pelajari teknologi terbaru yang dapat meningkatkan efisiensi dan produktivitas.
+   </p>
+   <div class="materials">
+    <h4 class="text-xl font-semibold mb-4">
+     Materi:
+    </h4>
+    <ul class="list-disc pl-6 mb-6">
+     <li>
+      Teknologi AI dan penerapannya
+     </li>
+     <li>
+      Internet of Things (IoT)
+     </li>
+     <li>
+      Blockchain dan keamanannya
+     </li>
+    </ul>
+   </div>
+   <div class="flex justify-center">
+    <button class="btn py-2 px-6 rounded-lg mx-2" onclick="showVideo(2)">
+     Lanjutkan
+    </button>
+    <button class="btn py-2 px-6 rounded-lg mx-2" onclick="closeModule(2)">
+     Kembali
+    </button>
+   </div>
+  </div>
+  <div class="module-details hidden bg-white text-gray-800 w-11/12 max-w-3xl mt-8 p-6 rounded-lg shadow-lg" id="module-3">
+   <h3 class="text-2xl font-bold mb-4 text-blue-500">
+    Module 3: Membangun Kesadaran Etika Digital
+   </h3>
+   <p class="text-lg mb-6">
+    Pelajari pentingnya etika digital dan cara menghindari cyberbullying.
+   </p>
+   <div class="materials">
+    <h4 class="text-xl font-semibold mb-4">
+     Materi:
+    </h4>
+    <ul class="list-disc pl-6 mb-6">
+     <li>
+      Prinsip-prinsip etika digital
+     </li>
+     <li>
+      Contoh kasus cyberbullying
+     </li>
+     <li>
+      Strategi untuk berperilaku etis online
+     </li>
+    </ul>
+   </div>
+   <div class="flex justify-center">
+    <button class="btn py-2 px-6 rounded-lg mx-2" onclick="showVideo(3)">
+     Lanjutkan
+    </button>
+    <button class="btn py-2 px-6 rounded-lg mx-2" onclick="closeModule(3)">
+     Kembali
+    </button>
+   </div>
+  </div>
+  <div class="module-details hidden bg-white text-gray-800 w-11/12 max-w-3xl mt-8 p-6 rounded-lg shadow-lg" id="module-4">
+   <h3 class="text-2xl font-bold mb-4 text-blue-500">
+    Module 4: Menanamkan Produktivitas Teknologi
+   </h3>
+   <p class="text-lg mb-6">
+    Pelajari cara menggunakan teknologi untuk meningkatkan produktivitas dan mencapai tujuan karier.
+   </p>
+   <div class="materials">
+    <h4 class="text-xl font-semibold mb-4">
+     Materi:
+    </h4>
+    <ul class="list-disc pl-6 mb-6">
+     <li>
+      Alat produktivitas digital
+     </li>
+     <li>
+      Manajemen waktu dengan teknologi
+     </li>
+     <li>
+      Strategi mencapai tujuan karier
+     </li>
+    </ul>
+   </div>
+   <div class="flex justify-center">
+    <button class="btn py-2 px-6 rounded-lg mx-2" onclick="showVideo(4)">
+     Lanjutkan
+    </button>
+    <button class="btn py-2 px-6 rounded-lg mx-2" onclick="closeModule(4)">
+     Kembali
+    </button>
+   </div>
+  </div>
+  <!-- Video Container -->
+  <div class="video-container bg-white text-gray-800 w-11/12 max-w-3xl mt-8 p-6 rounded-lg shadow-lg" id="video-1">
+   <h3 class="text-2xl font-bold mb-4 text-blue-500">
+    Video: Literasi Digital
+   </h3>
+   <div class="mb-6">
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" width="100%">
+    </iframe>
+   </div>
+   <div class="flex justify-center">
+    <button class="btn py-2 px-6 rounded-lg mx-2" onclick="closeVideo(1)">
+     Kembali
+    </button>
+   </div>
+  </div>
+  <div class="video-container bg-white text-gray-800 w-11/12 max-w-3xl mt-8 p-6 rounded-lg shadow-lg" id="video-2">
+   <h3 class="text-2xl font-bold mb-4 text-blue-500">
+    Video: Teknologi Modern
+   </h3>
+   <div class="mb-6">
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" width="100%">
+    </iframe>
+   </div>
+   <div class="flex justify-center">
+    <button class="btn py-2 px-6 rounded-lg mx-2" onclick="closeVideo(2)">
+     Kembali
+    </button>
+   </div>
+  </div>
+  <div class="video-container bg-white text-gray-800 w-11/12 max-w-3xl mt-8 p-6 rounded-lg shadow-lg" id="video-3">
+   <h3 class="text-2xl font-bold mb-4 text-blue-500">
+    Video: Etika Digital
+   </h3>
+   <div class="mb-6">
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" width="100%">
+    </iframe>
+   </div>
+   <div class="flex justify-center">
+    <button class="btn py-2 px-6 rounded-lg mx-2" onclick="closeVideo(3)">
+     Kembali
+    </button>
+   </div>
+  </div>
+  <div class="video-container bg-white text-gray-800 w-11/12 max-w-3xl mt-8 p-6 rounded-lg shadow-lg" id="video-4">
+   <h3 class="text-2xl font-bold mb-4 text-blue-500">
+    Video: Produktivitas Teknologi
+   </h3>
+   <div class="mb-6">
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" width="100%">
+    </iframe>
+   </div>
+   <div class="flex justify-center">
+    <button class="btn py-2 px-6 rounded-lg mx-2" onclick="closeVideo(4)">
+     Kembali
+    </button>
+   </div>
+  </div>
+  <script>
+   function showModule(id) {
+            document.querySelectorAll('.module-details').forEach(detail => detail.classList.add('hidden'));
+            document.getElementById(`module-${id}`).classList.remove('hidden');
+        }
+
+        function closeModule(id) {
+            document.getElementById(`module-${id}`).classList.add('hidden');
+        }
+
+        function showVideo(id) {
+            document.querySelectorAll('.module-details').forEach(detail => detail.classList.add('hidden'));
+            document.querySelectorAll('.video-container').forEach(video => video.classList.remove('active'));
+            document.getElementById(`video-${id}`).classList.add('active');
+        }
+
+        function closeVideo(id) {
+            document.getElementById(`video-${id}`).classList.remove('active');
+            document.getElementById(`module-${id}`).classList.remove('hidden');
+        }
+  </script>
+ </body>
+</html>
